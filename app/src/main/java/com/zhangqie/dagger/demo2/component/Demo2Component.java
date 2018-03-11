@@ -7,7 +7,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 /**
- * Created by Administrator on 2018/3/10.
+ * Created by zhangqie on 2018/3/10.
  */
 
 

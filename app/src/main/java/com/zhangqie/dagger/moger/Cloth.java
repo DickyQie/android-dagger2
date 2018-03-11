@@ -1,7 +1,7 @@
 package com.zhangqie.dagger.moger;
 
 /**
- * Created by Administrator on 2018/3/10.
+ * Created by zhangqie on 2018/3/10.
  */
 
 public class Cloth {

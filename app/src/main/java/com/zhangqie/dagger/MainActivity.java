@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.zhangqie.dagger.demo1.Demo1Activity;
 import com.zhangqie.dagger.demo2.Demo2Activity;
+import com.zhangqie.dagger.demo3.Demo3Activity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn3).setOnClickListener(this);
         findViewById(R.id.btn1).setOnClickListener(this);
         findViewById(R.id.btn4).setOnClickListener(this);
+        findViewById(R.id.btn5).setOnClickListener(this);
     }
 
 
@@ -36,13 +38,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this,Demo1Activity.class));
                 break;
             case R.id.btn2:
-                startActivity(new Intent(MainActivity.this,Main2Activity.class));
+                startActivity(new Intent(MainActivity.this,Demo2Activity.class));
                 break;
             case R.id.btn3:
-                startActivity(new Intent(MainActivity.this,Main3Activity.class));
+                startActivity(new Intent(MainActivity.this,Demo3Activity.class));
                 break;
             case R.id.btn4:
-                startActivity(new Intent(MainActivity.this,Demo2Activity.class));
+                startActivity(new Intent(MainActivity.this,Main2Activity.class));
+                break;
+            case R.id.btn5:
+                startActivity(new Intent(MainActivity.this,Main3Activity.class));
                 break;
         }
     }

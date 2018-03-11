@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+
 import com.zhangqie.dagger.component.DaggerMainComponent;
 import com.zhangqie.dagger.component.MainComponent;
 import com.zhangqie.dagger.module.MainModule;
@@ -14,7 +15,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
- * Created by Administrator on 2018/3/10.
+ * Created by zhangqie on 2018/3/10.
  */
 
 public class Main3Activity extends AppCompatActivity {
@@ -51,6 +52,9 @@ public class Main3Activity extends AppCompatActivity {
         MainComponent mainComponent = DaggerMainComponent.builder().mainModule(new MainModule()).build();
         mainComponent.inject(this);
         textView.setText("颜色："+redCloth+"---"+blueCloth+"---");
+
+
+
     }
 
 }

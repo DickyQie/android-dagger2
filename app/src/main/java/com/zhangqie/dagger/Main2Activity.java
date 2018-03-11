@@ -16,28 +16,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
- * Created by Administrator on 2018/3/10.
- *
- * https://www.jianshu.com/p/1d84ba23f4d2
- *
- * https://www.cnblogs.com/all88/p/5788556.html
- *
- * http://blog.csdn.net/fan_zyf/article/details/71720592#t6
- *
- * https://wenku.baidu.com/view/35e1f5effc4ffe473268ab7f.html
- *
- * https://github.com/luxiaoming/dagger2Demo
- *
- * https://www.jianshu.com/p/708a3e957cf8
- *
- *
- * https://www.jianshu.com/p/37b05878119c
- *
- * https://www.jianshu.com/p/24af4c102f62
- * https://www.jianshu.com/p/01d3c014b0b1
- *
- * https://www.jianshu.com/p/a23c50cb4094
- *
+ * Created by zhangqie on 2018/3/10.
  *
  */
 
@@ -50,9 +29,6 @@ public class Main2Activity extends AppCompatActivity {
     Shoe shoe;
     @Inject
     Clothes clothes;
-
-
-
     @Inject
     @Named("red")
     Cloth redCloth;

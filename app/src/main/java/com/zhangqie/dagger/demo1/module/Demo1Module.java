@@ -10,7 +10,7 @@ import dagger.Module;
  */
 
 
-@Module  //意这是一个提供数据的【模块】
+@Module  //这是一个提供数据的【模块】
 public class Demo1Module {
 
     private Demo1Activity demo1Activity;

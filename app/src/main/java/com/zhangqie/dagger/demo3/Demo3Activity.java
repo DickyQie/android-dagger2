@@ -1,4 +1,4 @@
-package com.zhangqie.dagger.demo1;
+package com.zhangqie.dagger.demo3;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,20 +9,21 @@ import android.widget.Toast;
 
 import com.zhangqie.dagger.R;
 import com.zhangqie.dagger.demo1.bean.CommodityInfo;
-import com.zhangqie.dagger.demo1.component.DaggerDemo1Component;
+import com.zhangqie.dagger.demo3.component.DaggerDemo3Component;
+import com.zhangqie.dagger.demo3.module.Demo3Module;
 
 import javax.inject.Inject;
 
 /**
- * Created by zhangqie on 2018/3/10.
+ * Created by zhangqie on 2018/3/11.
  *
+ * CommodityInfo 关闭   @Inject注解
  *
- * Dagger2的简单使用
  *
  */
 
+public class Demo3Activity extends AppCompatActivity {
 
-public class Demo1Activity extends AppCompatActivity {
 
     TextView textView;
 
@@ -34,9 +35,15 @@ public class Demo1Activity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo1_layout);
-        DaggerDemo1Component.builder()
-                //.demo1Module(new Demo1Module(this)) //可要可不要
-        .build().inject(this);
+
+       /* DaggerDemo3Component.builder()
+                .build().inject(this);*/
+
+        DaggerDemo3Component.builder()
+                .demo3Module(new Demo3Module(this))
+                .build()
+                .inject(this);
+
         initView();
     }
 
@@ -46,9 +53,11 @@ public class Demo1Activity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Demo1Activity.this,"对象值："+commodityInfo.toString(),Toast.LENGTH_LONG).show();
+                Toast.makeText(Demo3Activity.this,"对象值："+commodityInfo.toString(),Toast.LENGTH_LONG).show();
                 textView.setText("对象值："+commodityInfo.toString());
             }
         });
     }
+
+
 }

@@ -7,9 +7,6 @@ package com.zhangqie.dagger.demo2.bean;
 
 import javax.inject.Inject;
 
-/***
- * 这是一个商品类
- */
 public class DemoInfo {
 
     @Inject

@@ -14,7 +14,7 @@ import com.zhangqie.dagger.demo2.component.DaggerDemo2Component;
 import javax.inject.Inject;
 
 /**
- * Created by Administrator on 2018/3/10.
+ * Created by zhangqie on 2018/3/10.
  */
 
 public class Demo2Activity extends AppCompatActivity {
@@ -40,8 +40,12 @@ public class Demo2Activity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Demo2Activity.this,"对象值："+demoInfo.getUerNikeName(),Toast.LENGTH_LONG).show();
-                textView.setText("对象值："+demoInfo.getUerNikeName());
+                try {
+                    Toast.makeText(Demo2Activity.this,"对象值："+demoInfo.getUerNikeName(),Toast.LENGTH_LONG).show();
+                    textView.setText("对象值："+demoInfo.getUerNikeName());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
